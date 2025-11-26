@@ -1,0 +1,28 @@
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    background: #ff733a 0 0 no-repeat padding-box !important;
+    color: #f2f2f2 !important;
+    opacity: 1;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background: #ff733a 0 0 no-repeat padding-box !important;
+    color: #f2f2f2 !important;
+    opacity: 1;
+}
+
+.navbar-nav .nav-link {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    border-radius: 4px !important;
+}
+
+/* Open dropdown on hover (desktop only) */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .navbar .dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+}
