@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import "./contactUs.css";
+import { useEffect } from "react";
 
 const ContactUs = () => {
+    useEffect(() => {
+        document.title = `Enlight Rentals || Contact Us`; // Set the document title
+    }, []); 
   return (
     <>
       <div style={{ overflowX: "clip" }} className="contact3">
