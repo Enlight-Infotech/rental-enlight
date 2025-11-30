@@ -1,6 +1,4 @@
-import ContactUs from "../contact-us/contactUs"
 import MapSection from "../contact-us/map/map"
-import Products from "../categories/categories"
 import { useEffect } from "react";
 
 const Home = () => {

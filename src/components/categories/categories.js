@@ -1,14 +1,16 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const Products = ({ productData }) => {
+const Categories = ({ productData }) => {
     const { type } = useParams(); // computers, printers, etc.
 
-    debugger;
     const product = productData.find((item) => item.id === type);
     useEffect(() => {
-        document.title = `Enlight Rentals || Categories || ${product.categoryName}`; // Set the document title
+        if(product && product.categoryName) {
+            document.title = `Enlight Rentals || Categories || ${product.categoryName}`; // Set the document title
+        }
     }, [product]); 
+
     if (!product) return <h2>Product Not Found</h2>;
 
     return (
@@ -31,4 +33,4 @@ const Products = ({ productData }) => {
     );
 };
 
-export default Products;
+export default Categories;

@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.13.2",
     "bootstrap": "^5.3.8",
+    "dotenv": "^17.2.3",
     "fs": "^0.0.1-security",
     "node-fetch": "^3.3.2",
     "react": "^19.2.0",

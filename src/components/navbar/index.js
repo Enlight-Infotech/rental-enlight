@@ -10,7 +10,7 @@ const NavBar = () => {
     const fetchProducts = async () => {
         try {
             const response = await axios.get("http://localhost:5500/api/admin/categories/get");
-            console.log("products received", response.data);
+            console.log("categories received", response.data);
 
             const products = response.data.resultData; // adjust according to your API response structure
             setProductData(products);
@@ -94,6 +94,12 @@ const NavBar = () => {
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/contact">
                             Contact Us
+                        </NavLink>
+                    </li>
+
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/products">
+                            Products
                         </NavLink>
                     </li>
 
