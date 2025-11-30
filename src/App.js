@@ -9,15 +9,6 @@ import { useEffect, useState } from "react";
 import Categories from "./components/categories/categories";
 
 function App() {
-  const [productData, setProductData] = useState([]);
-
-  useEffect(() => {
-    // Fetch product data from localStorage
-  const storedData = localStorage.getItem("productData");
-    if (storedData) {
-      setProductData(JSON.parse(storedData));
-    }
-  }, []);
 
   return (
     <div>
@@ -31,12 +22,12 @@ function App() {
 
         <Route
           path="/categories/:type"
-          element={<Categories productData={productData} />}
+          element={<Categories />}
         />
 
         <Route
           path="/products"
-          element={<Products productData={productData} />}
+          element={<Products />}
         />
         
         <Route path="/about" element={<AboutUs />} />

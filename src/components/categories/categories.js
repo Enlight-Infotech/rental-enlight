@@ -1,10 +1,23 @@
-import { useEffect } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const Categories = ({ productData }) => {
+const Categories = () => {
     const { type } = useParams(); // computers, printers, etc.
+    const [categoryData, setCategoryData] = useState([]);
 
-    const product = productData.find((item) => item.id === type);
+
+    async function getCategories() {
+        const response = await axios.get("http://localhost:5500/api/admin/categories/get");
+        const products = response.data.resultData;
+        setCategoryData(products);
+    }
+
+    useEffect(() => {
+        getCategories();
+    }, []);
+
+    const product = categoryData.find((item) => item.id === type);
     useEffect(() => {
         if(product && product.categoryName) {
             document.title = `Enlight Rentals || Categories || ${product.categoryName}`; // Set the document title

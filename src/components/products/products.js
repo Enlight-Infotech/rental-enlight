@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 
 const Products = () => {
   const [productData, setProductData] = useState([]);
@@ -38,6 +37,7 @@ const Products = () => {
     const rzp = new window.Razorpay(options);
     rzp.open();
   };
+
   async function getProducts() {
     const response = await axios.get("http://localhost:5500/api/admin/products/get");
     const products = response.data.resultData;
@@ -68,8 +68,8 @@ const Products = () => {
                 <div class="card-body">
                   <h5 class="card-title">{item.productName}</h5>
                   <p class="card-text">{item.productDesc}</p>
-                  <p class="card-text"><b>Rs.</b> <span style={{textDecoration: 'line-through'}}>{item.productPrice}</span> <b>{item.discountPrice}</b></p>
-                  <button onClick={() => makePayment(item.discountPrice)} class="btn btn-primary">Pay Now</button>
+                  <p class="card-text"><b>Rs.</b> <span style={{ textDecoration: 'line-through' }}>{item.productPrice}</span> <b>{item.discountPrice}</b></p>
+                  <button onClick={() => makePayment(item.discountPrice)} class="btn btn-success">Pay Now</button>
                 </div>
               </div>
             ))}
