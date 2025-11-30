@@ -5,7 +5,6 @@ import AboutUs from "./components/about-us/aboutUs";
 import ContactUs from "./components/contact-us/contactUs";
 import NavBar from "./components/navbar";
 import MapSection from "./components/contact-us/map/map";
-import { useEffect, useState } from "react";
 import Categories from "./components/categories/categories";
 
 function App() {
