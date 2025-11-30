@@ -5,7 +5,7 @@ import axios from "axios";
 
 const NavBar = () => {
     const navigate = useNavigate();
-    const [productData, setProductData] = useState ([]);
+    const [categoryData, setCategoryData] = useState([]);
 
     const fetchProducts = async () => {
         try {
@@ -13,8 +13,7 @@ const NavBar = () => {
             console.log("categories received", response.data);
 
             const products = response.data.resultData; // adjust according to your API response structure
-            setProductData(products);
-            localStorage.setItem("productData", JSON.stringify(products));
+            setCategoryData(products);
         } catch (error) {
             console.error("Error fetching products:", error);
         }
@@ -22,7 +21,7 @@ const NavBar = () => {
 
     // Call it in useEffect
     useEffect(() => {
-    fetchProducts();
+        fetchProducts();
     }, []);
 
     return (
@@ -78,7 +77,7 @@ const NavBar = () => {
 
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             {
-                                productData.map((item) => {
+                                categoryData.map((item) => {
                                     return <li key={item.id}>
                                         <NavLink className="dropdown-item"
                                             to={`/categories/${item.id}`}
