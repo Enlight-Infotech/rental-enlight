@@ -15,7 +15,6 @@ function App() {
       <NavBar />
 
       {/* Page Routing */}
-      <div className="p-2">
       <Routes>
         <Route path="/" element={<Home />} />
 
@@ -35,7 +34,6 @@ function App() {
 
         
       </Routes>
-      </div>
     </div>
   );
 }

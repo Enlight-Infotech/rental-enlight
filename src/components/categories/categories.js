@@ -27,7 +27,7 @@ const Categories = () => {
     if (!product) return <h2>Product Not Found</h2>;
 
     return (
-        <div style={{ overflowX: 'clip' }} class="contact4 overflow-hiddedn position-relative">
+        <div style={{ overflowX: 'clip' }} class="p-2 contact4 overflow-hiddedn position-relative">
             <div class="row no-gutters">
                 {(product.key % 2 === 0) && <div class="responsiveImgContainer col-lg-6 left-image p-r-0">
                     <img className="responsiveImg" alt="product" src={product.imageUrl} />

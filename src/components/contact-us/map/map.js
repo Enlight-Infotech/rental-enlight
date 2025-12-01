@@ -7,9 +7,7 @@ const MapSection = () => {
   const mapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
 
   return (
-    <div className="container-fluid">
-      <h2 className="text-center mb-3">Our Location</h2>
-
+    <div className="p-0 container-fluid">
       {/* Embedded Google Map */}
       <iframe
         title="company-location"

@@ -8,7 +8,7 @@ const ContactUs = () => {
     }, []); 
   return (
     <>
-      <div style={{ overflowX: "clip" }} className="contact3">
+      <div style={{ overflowX: "clip" }} className="p-2 contact3">
         <div className="row no-gutters">
           <div className="container">
             <div className="row">
