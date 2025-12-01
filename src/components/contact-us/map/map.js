@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React from "react";
 
 const MapSection = () => {
@@ -7,6 +8,13 @@ const MapSection = () => {
   const mapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
 
   return (
+                <Box
+                    // ref={ref}
+                    sx={{
+                        padding: "32px 0 32px 0",
+                        width: "100%",
+                    }}
+                >
     <div className="p-0 container-fluid">
       {/* Embedded Google Map */}
       <iframe
@@ -32,6 +40,7 @@ const MapSection = () => {
         </a>
       </div>
     </div>
+    </Box>
   );
 };
 

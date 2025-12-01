@@ -31,7 +31,7 @@ const team = [
 
 export default function AboutUs() {
   return (
-    <Box sx={{ minHeight: "100vh", padding: "32px 0" }}>
+    <Box sx={{ padding: "32px 0 32px 0" }}>
       <Container>
         <Typography
           variant="h4"

@@ -46,7 +46,7 @@ export default function StatsSection() {
     });
 
     return (
-        <div>
+        <div style={{background: '#eff3f9'}}>
             <div style={{ position: "relative", width: "100%" }}>
                 {/* Background Image */}
                 <img
@@ -74,7 +74,7 @@ export default function StatsSection() {
             <Box
                 ref={ref}
                 sx={{
-                    padding: "70px 0",
+                    padding: "32px 0 32px 0",
                     width: "100%",
                 }}
             >

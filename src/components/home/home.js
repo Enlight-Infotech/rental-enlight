@@ -2,6 +2,7 @@ import MapSection from "../contact-us/map/map"
 import { useEffect } from "react";
 import StatsSection from "./stats";
 import AboutUs from "../about-us/aboutUs";
+import Testimonial from "./testimonial";
 
 const Home = () => {
     useEffect(() => {
@@ -10,6 +11,7 @@ const Home = () => {
     return <>
         <StatsSection />
         <AboutUs />
+        <Testimonial />
         <MapSection />
     </>
 }
